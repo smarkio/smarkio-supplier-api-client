@@ -1,0 +1,20 @@
+{
+    "name": "adclick/smarkio-supplier",
+    "type": "library",
+    "description": "Accelerator to communicate with the Smark.io Lead API",
+    "keywords": ["smarkio","lead","adclick"],
+    "homepage":"https://github.com/adclick/smarkio-supplier",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adclick",
+            "email": "developers@adclick.pt",
+            "homepage": "http://www.adclickint.com/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": { "Adclick\\Smarkio\\Supplier\\": "src/Adclick/Smarkio/Supplier/" }
+    }
+}
