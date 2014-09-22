@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Accelerator to communicate with the Smark.io Lead API",
     "keywords": ["smarkio","lead","adclick"],
-    "homepage":"https://github.com/adclick/smarkio-supplier",
+    "homepage":"https://github.com/smarkio/smarkio-supplier",
     "license": "MIT",
     "authors": [
         {
