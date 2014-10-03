@@ -74,7 +74,6 @@ $lead = new Lead($api_token, $external_id, $campaign_external_id, $ip_address, $
 $lead->setFirstName('João');
 $lead->setLastName('Silva');
 $lead->setPayout('12.12');
-$lead->setIntegrationStatusId(Lead::INTEGRATION_STATUS_SUCCESS);
 
 // set Lead's extra information
 $lead->addExtraField('profession', 'developer');
@@ -112,7 +111,6 @@ lead[domain]              | Varchar(255)  | Optional       | Website domain wher
 lead[traffic_source_name] | Varchar(255)  | Optional       | Traffic Source name Ex: Adwords, Facebook,Bing
 lead[traffic_source_type] | Varchar(255)  | Optional       | One of the following ie: Banner, Email, Keyword, .. Other ..
 lead[traffic_source_value]| Varchar(255)  | Optional       | Example: Banner_url, Keyword used in search, etc
-lead[integration_status_id]	| Int         | Optional [def:3]| The integration status of the lead for the client. One of the following : (2, Lead was rejected by the client) OR (3, Lead was accepted by the client )
 lead[integration_response]| Varchar(4096) | Optional       | The response provided by the client when lead was integrated with client. Useful to include the rejection reason when lead was rejected.
 lead[user_agent]          | Varchar(255)  | Optional       | HTTP_USER_AGENT of the browser the user has used when lead was captured
 lead[browser_language]    | Varchar(40)   | Optional       | The main/default language of the browser.Can be obtained from HTTP_ACCEPT_LANGUAGE

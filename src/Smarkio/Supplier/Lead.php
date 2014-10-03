@@ -15,9 +15,6 @@ require_once('SendLead.php');
 class Lead
 {
 
-    const INTEGRATION_STATUS_SUCCESS = 3;
-    const INTEGRATION_STATUS_REJECTED = 2;
-
     // Lead fields array
     private $leadFields = array();
 
@@ -336,18 +333,6 @@ class Lead
     public function setTrafficSourceValue($trafficSourceValue)
     {
         $this->leadFields['traffic_source_value'] = $trafficSourceValue;
-
-    }
-
-    public function getIntegrationStatusId()
-    {
-        return isset($this->leadFields['integration_status_id']) ? $this->leadFields['integration_status_id'] : null;
-
-    }
-
-    public function setIntegrationStatusId($integrationStatusId)
-    {
-        $this->leadFields['integration_status_id'] = $integrationStatusId;
 
     }
 

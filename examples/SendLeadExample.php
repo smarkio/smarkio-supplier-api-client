@@ -22,8 +22,6 @@ $lead = new Lead($api_token, $external_id, $campaign_external_id, $ip_address, $
 $lead->setFirstName('João');
 $lead->setLastName('Silva');
 $lead->setPayout('12.12');
-$lead->setIntegrationStatusId(Lead::INTEGRATION_STATUS_SUCCESS);
-
 
 // set Lead's extra information
 $lead->addExtraField('profession', 'developer');
