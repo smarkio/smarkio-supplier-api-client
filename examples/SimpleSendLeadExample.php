@@ -4,9 +4,9 @@
  * and how to use the API to send it to LeadOffice.
  */
 
-require __DIR__ . '/../src/Adclick/Smarkio/Supplier/Lead.php';
+require __DIR__ . '/../src/Smarkio/Supplier/Lead.php';
 
-use Adclick\Smarkio\Supplier\Lead;
+use Smarkio\Supplier\Lead;
 
 $api_token = 'INSERT YOUR TOKEN HERE';
 $external_id = '1';

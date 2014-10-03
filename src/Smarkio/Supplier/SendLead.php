@@ -1,6 +1,6 @@
 <?php
 
-namespace Adclick\Smarkio\Supplier;
+namespace Smarkio\Supplier;
 
 class SendLead
 {

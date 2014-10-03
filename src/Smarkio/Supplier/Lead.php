@@ -2,14 +2,13 @@
 /**
  *
  *
- * @author     Vítor Santos <vitor.santos@adclick.pt>
- * @copyright  2014 Adclick
- * @license    [SMARKIO_URL_LICENSE_HERE]
+ * @author     Vítor Santos <vitor.santos@smark.io>
+ * @copyright  2014 Smark.io
+ * @license    http://opensource.org/licenses/MIT MIT License
  *
- * [SMARKIO_DISCLAIMER]
  */
 
-namespace Adclick\Smarkio\Supplier;
+namespace Smarkio\Supplier;
 
 require_once('SendLead.php');
 
@@ -349,18 +348,6 @@ class Lead
     public function setIntegrationStatusId($integrationStatusId)
     {
         $this->leadFields['integration_status_id'] = $integrationStatusId;
-
-    }
-
-    public function getIntegrationAt()
-    {
-        return isset($this->leadFields['integration_at']) ? $this->leadFields['integration_at'] : null;
-
-    }
-
-    public function setIntegrationAt($integrationAt)
-    {
-        $this->leadFields['integration_at'] = $integrationAt;
 
     }
 
