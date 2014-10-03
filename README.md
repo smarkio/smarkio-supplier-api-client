@@ -1,7 +1,7 @@
 #Smark.io Supplier - API
 =========================
 
-One accelerator to communicate with © Smark.io API to create Leads
+An accelerator to communicate with © Smark.io API to create Leads
 
 Installation and usage with Composer
 ----------
