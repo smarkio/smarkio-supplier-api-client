@@ -9,7 +9,7 @@ Installation and usage with Composer
 
 Add the following to your composer.json file in order to fetch the latest stable version of the project:
 
-```
+```json
 {
     "require": {
         "smarkio/smarkio-supplier": "*"
@@ -19,7 +19,7 @@ Add the following to your composer.json file in order to fetch the latest stable
 
 Then, in order to use the accelerator on your own PHP file, add the following:
 
-```
+```php
 require '[COMPOSER_VENDOR_PATH]/autoload.php';
 ```
 
@@ -41,7 +41,7 @@ You need to obtain one API token to use the API. This token is bound to each use
 ## Send a Lead
 
 
-```
+```php
 $api_token = 'YOUR API TOKEN HERE';
 $external_id = '1';
 $campaign_external_id = '98';
@@ -59,7 +59,7 @@ $response = $lead->send();
 
 ## Send a Lead with additional fields
 
-```
+```php
 $api_token = 'YOUR API TOKEN HERE';
 $external_id = '1';
 $campaign_external_id = '98';
