@@ -21,6 +21,9 @@ class Lead
     // Extra fields array
     private $extraFields = array();
 
+    // Lead Relations array
+    private $lead_relations = array();
+
     private $api_token = null;
 
     /**
@@ -498,6 +501,14 @@ class Lead
         return $this->extraFields;
     }
 
+    public function getLeadRelations(){
+        return $this->lead_relations;
+    }
+
+    public function addLeadRelation($relation_type,$related_lead_id){
+        $this->lead_relations[]= array($related_lead_id => $relation_type);
+    }
+
 
     /**
      * Sends a lead to Smark.io using Smark.io API.
@@ -513,6 +524,11 @@ class Lead
         if (count($this->getExtraFields()) > 0)
         {
             $sendFields['extra'] = $this->getExtraFields();
+        }
+
+        if (count($this->getLeadRelations()) > 0)
+        {
+            $sendFields['relations'] = $this->getLeadRelations();
         }
 
         return SendLead::send($this->getApiToken(), $sendFields, $api_base_url);

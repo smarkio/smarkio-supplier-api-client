@@ -27,7 +27,12 @@ $lead->setPayout('12.12');
 $lead->addExtraField('profession', 'developer');
 $lead->addExtraField('nationality', 'portuguese');
 
+// set Lead's relations
+$lead->addLeadRelation('family', 123456);
+$lead->addLeadRelation('family', 654321);
+
 // send the Lead
 $response = $lead->send();
 
 echo "API Response: '{$response}'\n";
+
