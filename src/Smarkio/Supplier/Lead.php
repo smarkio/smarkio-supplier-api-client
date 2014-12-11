@@ -303,42 +303,6 @@ class Lead
 
     }
 
-    public function getTrafficSourceName()
-    {
-        return isset($this->leadFields['traffic_source_name']) ? $this->leadFields['traffic_source_name'] : null;
-
-    }
-
-    public function setTrafficSourceName($trafficSourceName)
-    {
-        $this->leadFields['traffic_source_name'] = $trafficSourceName;
-
-    }
-
-    public function getTrafficSourceType()
-    {
-        return isset($this->leadFields['traffic_source_type']) ? $this->leadFields['traffic_source_type'] : null;
-
-    }
-
-    public function setTrafficSourceType($trafficSourceType)
-    {
-        $this->leadFields['traffic_source_type'] = $trafficSourceType;
-
-    }
-
-    public function getTrafficSourceValue()
-    {
-        return isset($this->leadFields['traffic_source_value']) ? $this->leadFields['traffic_source_value'] : null;
-
-    }
-
-    public function setTrafficSourceValue($trafficSourceValue)
-    {
-        $this->leadFields['traffic_source_value'] = $trafficSourceValue;
-
-    }
-
     public function getIntegrationResponse()
     {
         return isset($this->leadFields['integration_response']) ? $this->leadFields['integration_response'] : null;
@@ -468,6 +432,66 @@ class Lead
     public function setSourceReference($sourceReference)
     {
         $this->leadFields['source_reference'] = $sourceReference;
+
+    }
+
+    public function getSiteHash()
+    {
+        return isset($this->leadFields['site_hash']) ? $this->leadFields['site_hash'] : null;
+
+    }
+
+    public function setSiteHash($siteHash)
+    {
+        $this->leadFields['site_hash'] = $siteHash;
+
+    }
+
+    public function getUtmSource()
+    {
+        return isset($this->leadFields['utm_source']) ? $this->leadFields['utm_source'] : null;
+
+    }
+
+    public function setUtmSource($utmSource)
+    {
+        $this->leadFields['utm_source'] = $utmSource;
+
+    }
+
+    public function getUtmCampaign()
+    {
+        return isset($this->leadFields['utm_campaign']) ? $this->leadFields['utm_campaign'] : null;
+
+    }
+
+    public function setUtmCampaign($utmCampaign)
+    {
+        $this->leadFields['utm_campaign'] = $utmCampaign;
+
+    }
+
+    public function getUtmMedium()
+    {
+        return isset($this->leadFields['utm_medium']) ? $this->leadFields['utm_medium'] : null;
+
+    }
+
+    public function setUtmMedium($utmMedium)
+    {
+        $this->leadFields['utm_medium'] = $utmMedium;
+
+    }
+
+    public function getUtmContent()
+    {
+        return isset($this->leadFields['utm_content']) ? $this->leadFields['utm_content'] : null;
+
+    }
+
+    public function setUtmContent($utmContent)
+    {
+        $this->leadFields['utm_content'] = $utmContent;
 
     }
 

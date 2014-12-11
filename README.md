@@ -108,9 +108,6 @@ The following lead fields are available:
 | lead[identification_number1]      | Int		      | Optional       | Number of document to identify the Lead |
 | lead[identification_number2]      | Int		      | Optional       | Number of document to identify the Lead |
 | lead[domain]                      | Varchar(255)  | Optional       | Website domain where lead was generated |
-| lead[traffic_source_name]         | Varchar(255)  | Optional       | Traffic Source name Ex: Adwords, Facebook,Bing |
-| lead[traffic_source_type]         | Varchar(255)  | Optional       | One of the following ie: Banner, Email, Keyword, .. Other .. |
-| lead[traffic_source_value]        | Varchar(255)  | Optional       | Example: Banner_url, Keyword used in search, etc |
 | lead[integration_response]        | Varchar(4096) | Optional       | The response provided by the client when lead was integrated with client. Useful to include the rejection reason when lead was rejected. |
 | lead[user_agent]                  | Varchar(255)  | Optional       | HTTP_USER_AGENT of the browser the user has used when lead was captured |
 | lead[browser_language]            | Varchar(40)   | Optional       | The main/default language of the browser.Can be obtained from HTTP_ACCEPT_LANGUAGE |
@@ -122,6 +119,11 @@ The following lead fields are available:
 | lead[device_type]                 | Varchar(40)   | Optional       | |
 | lead[source]                      | Varchar(40)   | Optional       | |
 | lead[source_reference]            | Varchar(40)   | Optional       | |
+| lead[site_hash]					 | Varchar(255)  | Optional       | |
+| lead[utm_source]					 | Varchar(255)  | Optional       | Campaign source |
+| lead[utm_campaign]			     | Varchar(255)  | Optional       | Campaign name |
+| lead[utm_medium]					 | Varchar(255)  | Optional       | Campaign medium |
+| lead[utm_content]					 | Varchar(255)  | Optional       | Campaign content |
 
 Extra parameters can be sent via:
 
