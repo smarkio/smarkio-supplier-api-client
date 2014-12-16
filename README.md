@@ -124,6 +124,8 @@ The following lead fields are available:
 | lead[utm_campaign]			     | Varchar(255)  | Optional       | Campaign name |
 | lead[utm_medium]					 | Varchar(255)  | Optional       | Campaign medium |
 | lead[utm_content]					 | Varchar(255)  | Optional       | Campaign content |
+| lead[utm_term]					 | Varchar(255)  | Optional       | Campaign term |
+| lead[click_uid]					 | Varchar(255)  | Optional       | Click' unique ID |
 
 Extra parameters can be sent via:
 

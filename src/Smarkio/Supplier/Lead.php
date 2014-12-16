@@ -495,6 +495,30 @@ class Lead
 
     }
 
+    public function getUtmTerm()
+    {
+        return isset($this->leadFields['utm_term']) ? $this->leadFields['utm_term'] : null;
+
+    }
+
+    public function setUtmTerm($utmTerm)
+    {
+        $this->leadFields['utm_term'] = $utmTerm;
+
+    }
+
+    public function getClickUid()
+    {
+        return isset($this->leadFields['click_uid']) ? $this->leadFields['click_uid'] : null;
+
+    }
+
+    public function setClickUid($clickUid)
+    {
+        $this->leadFields['click_uid'] = $clickUid;
+
+    }
+
     public function addExtraField($fieldName, $fieldValue)
     {
         if (!isset($this->extraFields))
