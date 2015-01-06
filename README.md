@@ -1,7 +1,7 @@
-#Smark.io Supplier - API
+#Smarkio Supplier - API
 =========================
 
-An accelerator to communicate with © Smark.io API to create Leads
+An accelerator to communicate with © Smarkio API to create Leads
 
 Installation and usage with Composer
 ----------
@@ -33,7 +33,7 @@ Contents
 Before you start
 ----------------
 
-You need to obtain one API token to use the API. This token is bound to each user of the Smark.io system details.
+You need to obtain one API token to use the API. This token is bound to each user of the Smarkio system details.
 
 
 # Usage
