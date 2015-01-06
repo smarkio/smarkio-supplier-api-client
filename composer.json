@@ -1,9 +1,9 @@
 {
-    "name": "smarkio/smarkio-supplier",
+    "name": "smarkio/smarkio-supplier-api-client",
     "type": "library",
     "description": "Accelerator to communicate with the Smark.io Lead API",
     "keywords": ["smarkio","lead","supplier"],
-    "homepage":"https://github.com/smarkio/smarkio-supplier",
+    "homepage":"https://github.com/smarkio/smarkio-supplier-api-client",
     "license": "MIT",
     "authors": [
         {

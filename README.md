@@ -12,7 +12,7 @@ Add the following to your composer.json file in order to fetch the latest stable
 ```json
 {
     "require": {
-        "smarkio/smarkio-supplier": "*"
+        "smarkio/smarkio-supplier-api-client": "*"
     }
 }
 ```
