@@ -519,6 +519,18 @@ class Lead
 
     }
 
+    public function getSmkid()
+    {
+        return isset($this->leadFields['smkid']) ? $this->leadFields['smkid'] : null;
+
+    }
+
+    public function setSmkid($smkid)
+    {
+        $this->leadFields['smkid'] = $smkid;
+
+    }
+
     public function addExtraField($fieldName, $fieldValue)
     {
         if (!isset($this->extraFields))
