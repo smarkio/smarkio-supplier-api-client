@@ -83,6 +83,14 @@ $lead->addExtraField('nationality', 'portuguese');
 $response = $lead->send();
 ```
 
+# Response format
+
+The response is a JSON containing at least a 'code' and 'message' fields. The code 200 indicates that the lead was integrated successfully.
+
+```json
+{"code":"200","message":"OK","lead_id":"85177"}
+```
+
 # Fields available
 
 The following lead fields are available:
@@ -127,6 +135,10 @@ The following lead fields are available:
 | lead[utm_term]					| Varchar(255)  | Optional       | Campaign term |
 | lead[click_uid]					| Varchar(255)  | Optional       | Click' unique ID |
 | lead[smkid]					    | Varchar(255)  | Optional       | |
+| lead[rt_parent_cuid]			    | Varchar(255)  | Optional       | |
+| lead[rt_list_id]  			    | Varchar(255)  | Optional       | |
+| lead[rt_list_name]  			    | Varchar(255)  | Optional       | |
+| lead[rt_list_external_id]		    | Varchar(255)  | Optional       | |
 
 Extra parameters can be sent via:
 

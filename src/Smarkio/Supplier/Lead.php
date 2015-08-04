@@ -531,6 +531,38 @@ class Lead
 
     }
 
+    public function getRtParentCuid() {
+        return isset($this->leadFields['rt_parent_cuid']) ? $this->leadFields['rt_parent_cuid'] : null;
+    }
+
+    public function setRtParentCuid($rtParentCuid) {
+        $this->leadFields['rt_parent_cuid'] = $rtParentCuid;
+    }
+
+    public function getRtListId() {
+        return isset($this->leadFields['rt_list_id']) ? $this->leadFields['rt_list_id'] : null;
+    }
+
+    public function setRtListId($rtListId) {
+        $this->leadFields['rt_list_id'] = $rtListId;
+    }
+
+    public function getRtListName() {
+        return isset($this->leadFields['rt_list_name']) ? $this->leadFields['rt_list_name'] : null;
+    }
+
+    public function setRtListName($rtListName) {
+        $this->leadFields['rt_list_name'] = $rtListName;
+    }
+
+    public function getRtListExternalId() {
+        return isset($this->leadFields['rt_list_external_id']) ? $this->leadFields['rt_list_external_id'] : null;
+    }
+
+    public function setRtListExternalId($rtListExternalId) {
+        $this->leadFields['rt_list_external_id'] = $rtListExternalId;
+    }
+
     public function addExtraField($fieldName, $fieldValue)
     {
         if (!isset($this->extraFields))
