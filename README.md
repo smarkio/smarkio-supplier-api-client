@@ -139,6 +139,8 @@ The following lead fields are available:
 | lead[rt_list_id]  			    | Varchar(255)  | Optional       | |
 | lead[rt_list_name]  			    | Varchar(255)  | Optional       | |
 | lead[rt_list_external_id]		    | Varchar(255)  | Optional       | |
+| lead[smk_category]		        | Varchar(255)  | Optional       | |
+| lead[smk_subcategory]		        | Varchar(255)  | Optional       | |
 
 Extra parameters can be sent via:
 
