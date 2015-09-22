@@ -563,6 +563,26 @@ class Lead
         $this->leadFields['rt_list_external_id'] = $rtListExternalId;
     }
 
+    public function getSmkCategory()
+    {
+        return isset($this->leadFields['smk_category']) ? $this->leadFields['smk_category'] : null;
+    }
+
+    public function setSmkCategory($smk_category)
+    {
+        $this->leadFields['smk_category'] = $smk_category;
+    }
+
+    public function getSmkSubCategory()
+    {
+        return isset($this->leadFields['smk_subcategory']) ? $this->leadFields['smk_subcategory'] : null;
+    }
+
+    public function setSmkSubCategory($smk_subcategory)
+    {
+        $this->leadFields['smk_subcategory'] = $smk_subcategory;
+    }
+
     public function addExtraField($fieldName, $fieldValue)
     {
         if (!isset($this->extraFields))
