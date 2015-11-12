@@ -14,6 +14,8 @@ require_once('SendLead.php');
 
 class Lead
 {
+    const API_BASE_URL_BR = 'https://api-sa.smark.io/';
+    const API_BASE_URL_EU = 'https://api.smark.io/';
 
     // Lead fields array
     private $leadFields = array();
@@ -625,11 +627,11 @@ class Lead
     /**
      * Sends a lead to Smark.io using Smark.io API.
      *
-     * @param null|string $api_base_url API base url. If null, default is used.
+     * @param string $api_base_url API base url. If null, default is used.
      *
      * @return mixed
      */
-    public function send($api_base_url = null)
+    public function send($api_base_url = self::API_BASE_URL_EU)
     {
         $sendFields = array('lead' => $this->getLeadFields());
 
