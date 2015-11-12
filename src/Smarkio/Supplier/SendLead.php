@@ -4,17 +4,12 @@ namespace Smarkio\Supplier;
 
 class SendLead
 {
-    const API_BASE_URL = 'https://api.smark.io/';
     const API_VERSION = 'v1';
 
-    public static function send($api_token, $post_fields, $api_url = null)
+    public static function send($api_token, $post_fields, $api_url)
     {
-        $base_api_url = self::API_BASE_URL;
-        if (!is_null($api_url))
-        {
-            $base_api_url = self::fix_url($api_url);
-        }
-
+        $base_api_url = self::fix_url($api_url);
+        
         $api_token = urlencode($api_token);
         $url = "{$base_api_url}" . self::API_VERSION . "/{$api_token}/lead/"; /* eg: https://api.smark.io/v1/XPTO000123/lead/ */
 
