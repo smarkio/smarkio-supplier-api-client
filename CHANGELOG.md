@@ -1,6 +1,11 @@
 CHANGELOG
 ==========================
 
+## 1.4.0 (2016-01-21)
+
+* Added possibility to force the creation of a new Lead (see documentation).
+* Added constants for BR and EU API URLs.
+
 ## 1.3.0 (2015-09-22)
 
 * Added getters and setters for fields: smk_category, smk_subcategory
