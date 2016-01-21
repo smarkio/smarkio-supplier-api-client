@@ -83,6 +83,28 @@ $lead->addExtraField('nationality', 'portuguese');
 $response = $lead->send();
 ```
 
+## Force new Lead creation
+
+If you want to force the creation of a new Lead, bypassing the conditions that would update an existing one, use the method setForceNewLeadCreation():
+
+```php
+$api_token = 'YOUR API TOKEN HERE';
+$external_id = '1';
+$campaign_external_id = '98';
+$ip_address = '74.125.224.72';
+$email = 'dummy@example.net';
+$domain = 'mywebsite.example.net';
+
+// create Lead with mandatory parameters
+$lead = new Lead($api_token, $external_id, $campaign_external_id, $ip_address, $email, $domain);
+
+// force new lead creation
+$lead->setForceNewLeadCreation(true);
+
+// send the Lead
+$response = $lead->send();
+```
+
 # Response format
 
 The response is a JSON containing at least a 'code' and 'message' fields. The code 200 indicates that the lead was integrated successfully.
@@ -141,6 +163,7 @@ The following lead fields are available:
 | lead[rt_list_external_id]		    | Varchar(255)  | Optional       | |
 | lead[smk_category]		        | Varchar(255)  | Optional       | |
 | lead[smk_subcategory]		        | Varchar(255)  | Optional       | |
+| lead[smk_create_new]              | Int		    | Optional       | Use the value '1' to force the creation of a new lead |
 
 Extra parameters can be sent via:
 

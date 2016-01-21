@@ -585,6 +585,23 @@ class Lead
         $this->leadFields['smk_subcategory'] = $smk_subcategory;
     }
 
+    public function isForceNewLeadCreation()
+    {
+        return isset($this->leadFields['smk_create_new']) && $this->leadFields['smk_create_new'] === "1";
+    }
+
+    public function setForceNewLeadCreation($forceNewLeadCreation = true)
+    {
+        if ($forceNewLeadCreation)
+        {
+            $this->leadFields['smk_create_new'] = "1";
+        }
+        else
+        {
+            unset($this->leadFields['smk_create_new']);
+        }
+    }
+
     public function addExtraField($fieldName, $fieldValue)
     {
         if (!isset($this->extraFields))
