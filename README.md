@@ -105,12 +105,36 @@ $lead->setForceNewLeadCreation(true);
 $response = $lead->send();
 ```
 
+## Dump lead Info
+
+If you want to receive lead info on response, use the method setDumpLeadInfo():
+
+```php
+$api_token = 'YOUR API TOKEN HERE';
+$external_id = '1';
+$campaign_external_id = '98';
+$ip_address = '74.125.224.72';
+$email = 'dummy@example.net';
+$domain = 'mywebsite.example.net';
+
+// create Lead with mandatory parameters
+$lead = new Lead($api_token, $external_id, $campaign_external_id, $ip_address, $email, $domain);
+
+// dump lead info
+$lead->setDumpLeadInfo();
+
+// send the Lead
+$response = $lead->send();
+```
+
+In this case, the `$response` will contain a new field called `lead_info`.
+
 # Response format
 
 The response is a JSON containing at least a 'code' and 'message' fields. The code 200 indicates that the lead was integrated successfully.
 
 ```json
-{"code":"200","message":"OK","lead_id":"85177"}
+{"code":"200","message":"OK","lead_id":"85177", "smkid": "1:rLJGWJLW2mNNS2qq"}
 ```
 
 # Fields available
@@ -164,6 +188,7 @@ The following lead fields are available:
 | lead[smk_category]		        | Varchar(255)  | Optional       | |
 | lead[smk_subcategory]		        | Varchar(255)  | Optional       | |
 | lead[smk_create_new]              | Int		    | Optional       | Use the value '1' to force the creation of a new lead |
+| lead[smk_dump_lead_info]          | Int		    | Optional       | Use the value '1' to receive lead info on response |
 
 Extra parameters can be sent via:
 
