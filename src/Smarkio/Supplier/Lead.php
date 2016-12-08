@@ -602,6 +602,23 @@ class Lead
         }
     }
 
+    public function isDumpLeadInfo()
+    {
+        return isset($this->leadFields['smk_dump_lead_info']) && $this->leadFields['smk_dump_lead_info'] === "1";
+    }
+
+    public function setDumpLeadInfo($dumpLeadInfo = true)
+    {
+        if ($dumpLeadInfo)
+        {
+            $this->leadFields['smk_dump_lead_info'] = "1";
+        }
+        else
+        {
+            unset($this->leadFields['smk_dump_lead_info']);
+        }
+    }
+
     public function addExtraField($fieldName, $fieldValue)
     {
         if (!isset($this->extraFields))
