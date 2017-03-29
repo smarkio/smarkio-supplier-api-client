@@ -78,6 +78,14 @@ class Lead
 
     }
 
+    public function setFiles($files){
+        $this->leadFields['files'] = $files;
+    }
+
+    public function getFiles(){
+        return isset($this->leadFields['files']) ? $this->leadFields['files'] : null;
+    }
+
     public function getExternalId()
     {
         return isset($this->leadFields['external_id']) ? $this->leadFields['external_id'] : null;
