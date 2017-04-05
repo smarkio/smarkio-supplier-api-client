@@ -55,6 +55,29 @@ $lead = new Lead($api_token, $external_id, $campaign_external_id, $ip_address, $
 // send the Lead
 $response = $lead->send();
 ```
+
+## Send a Lead with Files associated
+
+
+```php
+$api_token = 'YOUR API TOKEN HERE';
+$external_id = '1';
+$campaign_external_id = '98';
+$ip_address = '74.125.224.72';
+$email = 'dummy@example.net';
+$domain = 'mywebsite.example.net';
+
+// create Lead with mandatory parameters
+$lead = new Lead($api_token, $external_id, $campaign_external_id, $ip_address, $email, $domain);
+
+//Attach some files to it
+$lead->setFiles([
+    'photo' => "http://example.com/image.png",
+    'cc' => "http://example.com/cc.png"
+]);
+// send the Lead
+$response = $lead->send();
+```
  
 
 ## Send a Lead with additional fields
@@ -189,6 +212,7 @@ The following lead fields are available:
 | lead[smk_subcategory]		        | Varchar(255)  | Optional       | |
 | lead[smk_create_new]              | Int		    | Optional       | Use the value '1' to force the creation of a new lead |
 | lead[smk_dump_lead_info]          | Int		    | Optional       | Use the value '1' to receive lead info on response |
+| lead[files][filename]             | string        | Optional       | Values in this field will be uploaded and attached as files related to lead
 
 Extra parameters can be sent via:
 
