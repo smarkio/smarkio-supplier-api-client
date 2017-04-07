@@ -78,7 +78,7 @@ $lead->setFiles([
 // send the Lead
 $response = $lead->send();
 ```
- 
+
 
 ## Send a Lead with additional fields
 
@@ -151,6 +151,30 @@ $response = $lead->send();
 ```
 
 In this case, the `$response` will contain a new field called `lead_info`.
+
+## User custom API URL
+
+###### European API URL (Default):
+
+```php
+$response = $lead->send();
+```
+or
+```php
+$response = $lead->send(Lead::API_BASE_URL_EU);
+```
+
+###### Brazilian API URL:
+
+```php
+$response = $lead->send(Lead::API_BASE_URL_BR);
+```
+
+###### Custom API URL:
+
+```php
+$response = $lead->send('https://api-custom-example.smark.io');
+```
 
 # Response format
 
