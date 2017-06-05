@@ -1,6 +1,12 @@
 CHANGELOG
 ==========================
 
+## 1.6.0 (2017-06-05)
+* Added geo information (country, country code, region, region_code and city) 
+
+## 1.5.0 (2017-04-05)
+* Added support for files
+
 ## 1.4.0 (2016-01-21)
 
 * Added possibility to force the creation of a new Lead (see documentation).

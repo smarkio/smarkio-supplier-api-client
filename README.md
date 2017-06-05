@@ -236,6 +236,11 @@ The following lead fields are available:
 | lead[smk_subcategory]		        | Varchar(255)  | Optional       | |
 | lead[smk_create_new]              | Int		    | Optional       | Use the value '1' to force the creation of a new lead |
 | lead[smk_dump_lead_info]          | Int		    | Optional       | Use the value '1' to receive lead info on response |
+| lead[geo_country]                 | Varchar(50)   | Optional       | Country name |
+| lead[geo_country_code]            | Varchar(10)   | Optional       | Country Code, according to ISO 3166 |
+| lead[geo_region]                  | Varchar(50)   | Optional       | Region name |
+| lead[geo_region_code]             | Varchar(10)   | Optional       | Region code |
+| lead[geo_city]                    | Varchar(50)   | Optional       | City name |
 | lead[files][filename]             | string        | Optional       | Values in this field will be uploaded and attached as files related to lead
 
 Extra parameters can be sent via:
