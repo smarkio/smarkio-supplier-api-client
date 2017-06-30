@@ -627,6 +627,56 @@ class Lead
         }
     }
 
+    public function setGeoCountry($geoCountry)
+    {
+        $this->leadFields['geo_country'] = $geoCountry;
+    }
+
+    public function getGeoCountry()
+    {
+        return isset($this->leadFields['geo_country']) ? $this->leadFields['geo_country'] : null;
+    }
+
+    public function setGeoCountryCode($geoCountryCode)
+    {
+        $this->leadFields['geo_country_code'] = $geoCountryCode;
+    }
+
+    public function getGeoCountryCode()
+    {
+        return isset($this->leadFields['geo_country_code']) ? $this->leadFields['geo_country_code'] : null;
+    }
+
+    public function setGeoRegion($geoRegion)
+    {
+        $this->leadFields['geo_region'] = $geoRegion;
+    }
+
+    public function getGeoRegion()
+    {
+        return isset($this->leadFields['geo_region']) ? $this->leadFields['geo_region'] : null;
+    }
+
+    public function setGeoRegionCode($geoRegionCode)
+    {
+        $this->leadFields['geo_region_code'] = $geoRegionCode;
+    }
+
+    public function getGeoRegionCode()
+    {
+        return isset($this->leadFields['geo_region_code']) ? $this->leadFields['geo_region_code'] : null;
+    }
+
+    public function setGeoCity($geoCity)README.md
+    {
+        $this->leadFields['geo_city'] = $geoCity;
+    }
+
+    public function getGeoCity()
+    {
+        return isset($this->leadFields['geo_city']) ? $this->leadFields['geo_city'] : null;
+    }
+
     public function addExtraField($fieldName, $fieldValue)
     {
         if (!isset($this->extraFields))
