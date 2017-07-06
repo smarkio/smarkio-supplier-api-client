@@ -239,7 +239,7 @@ The following lead fields are available:
 | lead[geo_country]                 | Varchar(50)   | Optional       | Country name |
 | lead[geo_country_code]            | Varchar(10)   | Optional       | Country Code, according to ISO 3166 |
 | lead[geo_region]                  | Varchar(50)   | Optional       | Region name |
-| lead[geo_region_code]             | Varchar(10)   | Optional       | Region code |
+| lead[geo_region_code]             | Varchar(10)   | Optional       | Region code - This should come in a format "country_code"-"region_code", for instance PT-13 (Porto, Portugal) |
 | lead[geo_city]                    | Varchar(50)   | Optional       | City name |
 | lead[files][filename]             | string        | Optional       | Values in this field will be uploaded and attached as files related to lead
 
