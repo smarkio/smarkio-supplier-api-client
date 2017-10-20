@@ -248,3 +248,16 @@ Extra parameters can be sent via:
 | Parameter name                    |	Max size     | Properties     | Description / Values   |
 |-----------------------------------|---------------|----------------|------------------------|
 | extra[field_name]                 | Varchar(255)  | Optional       | extra field and value. |
+
+Processing flags (NOTE: if both lead field and flag with same name are filled, lead field will have precedence):
+
+| Parameter name                     |	Max size     | Properties     | Description / Values   |
+|------------------------------------|---------------|----------------|------------------------|
+| flag[smk_update_different_campaign]| Int           | Optional       | Use the value '1' to force the creation of a new lead |
+| flag[smk_create_new]               | Int		     | Optional       | Use the value '1' to force the creation of a new lead |
+| flag[smk_dump_lead_info]           | Int		     | Optional       | Use the value '1' to receive lead info on response |
+
+
+
+
+

@@ -1,6 +1,9 @@
 CHANGELOG
 ==========================
 
+# 1.7.0 (2017-10-16)
+* Added flag to update lead across campaigns
+
 ## 1.6.0 (2017-06-05)
 * Added geo information (country, country code, region, region_code and city) 
 

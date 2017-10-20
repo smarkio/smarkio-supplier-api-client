@@ -23,6 +23,9 @@ class Lead
     // Extra fields array
     private $extraFields = array();
 
+    // Processing flags
+    private $flags = array();
+
     // Lead Relations array
     private $lead_relations = array();
 
@@ -47,6 +50,7 @@ class Lead
     function __construct($api_token, $externalId, $campaignExternalId, $ipAddress, $email, $domain)
     {
         $this->leadFields = array();
+        $this->flags = array();
         $this->setApiToken($api_token);
         $this->setExternalId($externalId);
         $this->setCampaignExternalId($campaignExternalId);
@@ -595,35 +599,35 @@ class Lead
 
     public function isForceNewLeadCreation()
     {
-        return isset($this->leadFields['smk_create_new']) && $this->leadFields['smk_create_new'] === "1";
+        return isset($this->flags['smk_create_new']) && $this->flags['smk_create_new'] === "1";
     }
 
     public function setForceNewLeadCreation($forceNewLeadCreation = true)
     {
         if ($forceNewLeadCreation)
         {
-            $this->leadFields['smk_create_new'] = "1";
+            $this->flags['smk_create_new'] = "1";
         }
         else
         {
-            unset($this->leadFields['smk_create_new']);
+            unset($this->flags['smk_create_new']);
         }
     }
 
     public function isDumpLeadInfo()
     {
-        return isset($this->leadFields['smk_dump_lead_info']) && $this->leadFields['smk_dump_lead_info'] === "1";
+        return isset($this->flags['smk_dump_lead_info']) && $this->flags['smk_dump_lead_info'] === "1";
     }
 
     public function setDumpLeadInfo($dumpLeadInfo = true)
     {
         if ($dumpLeadInfo)
         {
-            $this->leadFields['smk_dump_lead_info'] = "1";
+            $this->flags['smk_dump_lead_info'] = "1";
         }
         else
         {
-            unset($this->leadFields['smk_dump_lead_info']);
+            unset($this->flags['smk_dump_lead_info']);
         }
     }
 
@@ -677,6 +681,23 @@ class Lead
         return isset($this->leadFields['geo_city']) ? $this->leadFields['geo_city'] : null;
     }
 
+    public function isUpdateDifferentCampaign()
+    {
+        return isset($this->flags['smk_update_different_campaign']) && $this->flags['smk_update_different_campaign'] === "1";
+    }
+
+    public function setUpdateDifferentCampaign($updateDifferentCampaign = false)
+    {
+        if ($updateDifferentCampaign)
+        {
+            $this->flags['smk_update_different_campaign'] = "1";
+        }
+        else
+        {
+            unset($this->flags['smk_update_different_campaign']);
+        }
+    }
+
     public function addExtraField($fieldName, $fieldValue)
     {
         if (!isset($this->extraFields))
@@ -707,6 +728,24 @@ class Lead
         return $this->extraFields;
     }
 
+    /**
+     * Sets the processing flags
+     *
+     * @param array $flags
+     */
+    public function setFlags($flags = array())
+    {
+        $this->flags = $flags;
+    }
+
+    /**
+     * @return array
+     */
+    public function getFlags()
+    {
+        return $this->flags;
+    }
+
     public function getLeadRelations(){
         return $this->lead_relations;
     }
@@ -730,6 +769,11 @@ class Lead
         if (count($this->getExtraFields()) > 0)
         {
             $sendFields['extra'] = $this->getExtraFields();
+        }
+
+        if(count($this->getFlags()) > 0)
+        {
+            $sendFields['flag'] = $this->getFlags();
         }
 
         if (count($this->getLeadRelations()) > 0)
