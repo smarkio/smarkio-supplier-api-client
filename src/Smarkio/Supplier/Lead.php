@@ -61,7 +61,7 @@ class Lead
 
     public function getSupplierId()
     {
-        return isset($this->leadFields['external_id']) ? $this->leadFields['external_id'] : null;
+        return isset($this->leadFields['supplier_id']) ? $this->leadFields['supplier_id'] : null;
     }
 
     public function setSupplierId($supplier_id)
