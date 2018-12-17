@@ -11,7 +11,7 @@ class SendLead
         $base_api_url = self::fix_url($api_url);
         
         $api_token = urlencode($api_token);
-        $url = "{$base_api_url}" . self::API_VERSION . "/{$api_token}/lead/"; /* eg: https://api.smark.io/v1/XPTO000123/lead/ */
+        $url = "{$base_api_url}" . self::API_VERSION . "/{$api_token}/lead"; /* eg: https://api.smark.io/v1/XPTO000123/lead */
 
         $rtn = self::adc_curl_post($url, $post_fields);
 
